@@ -2,7 +2,8 @@
 algorithms to practice python, git, and contribute to an open source repo for hacktoberfest!
 
 # How to Contribute
-- [sign up here](https://hacktoberfest.digitalocean.com/sign_up)
+- [sign up here](https://hacktoberfest.digitalocean.com/sign_up/register)
+  - read more about HacktoberFest [here](https://hacktoberfest.digitalocean.com/details)
 - fork the repo using the `Fork` button in the top right
 - clone your fork of the repo using `git clone https://github.com/your_username/hacktoberithms`
 - go to the `Issues` tab on the repo and view the incomplete challenges
