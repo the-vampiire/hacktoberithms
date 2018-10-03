@@ -19,5 +19,11 @@ algorithms to practice python, git, and contribute to an open source repo for ha
   - choose `Base fork: the-vampiire/hacktoberithms`
   - write a pull request message that describes your approach, anything you were stuck on and solved, and instructions on how to use the solution
 
+## If you get stuck
+- create a new issue to ask for help if any part of the contribution process is confusing you
+- ask a question / discuss about a problem using an Issue comment
+- dont post solutions in the comments - create a branch and contribute!
+
 # Other ways to contribute
 - open a new Issue with an algorithm problem so someone else can solve it
+- help people out in the issue comments
