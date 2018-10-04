@@ -26,12 +26,26 @@ algorithms to practice python, git, and contribute to an open source repo for ha
 - dont post solutions in the comments - create a branch and contribute!
 
 # Other ways to contribute
-- improve a solution
-  - repeat the process above but modify an existing solution file
-  - describe what you changed and why so that others can learn how to write better code
-  - do not make fun of or be rude in refactoring other peoples code. this is about learning not ego
-  - be prepared to defend your code during the code review process!
-- open a new Issue with an algorithm problem so someone else can solve it
-  - link to the source if you did not create the problem yourself (make sure it is public)
-  - use an appropriate label to mark the difficulty level
+
+## improve a solution
+- repeat the process above but modify an existing solution file
+- describe what you changed and why so that others can learn how to write better code
+- do not make fun of or be rude in refactoring other peoples code. this is about learning not ego
+- be prepared to defend your code during the code review process!
+
+## open a new Issue with an algorithm problem so someone else can solve it
+- use an appropriate label to mark the difficulty level
+- use the following template
+```
+Credit: [adapted from SOURCE NAME](SOURCE URL)
+
+# Challenge
+
+## test data
+
+## starter code
+
+## notes
+```
+
 - help people out in the issue comments
