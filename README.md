@@ -1,6 +1,10 @@
 # hacktoberithms
 algorithms to practice python, git, and contribute to an open source repo for hacktoberfest!
 
+## Python Solutions Only!
+- feel free to fork this repo and make one for your favorite language
+- open an issue with a link and ill update this readme with your language's version
+
 # How to Contribute
 ### only PRs that follow these steps will be approved!
 - [sign up here](https://hacktoberfest.digitalocean.com/sign_up/register)
