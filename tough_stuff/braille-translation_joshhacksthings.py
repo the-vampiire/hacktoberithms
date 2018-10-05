@@ -56,15 +56,15 @@ translate = {
 
 def answer(plaintext):
     characters = list(plaintext)
-    output = ""
+    out = ""
 
-    for character in characters:
-        translation = translate[character.lower()]
-        if character in string.ascii_uppercase:
-            translation = "000001" + translation
-        output += translation
+    for c in characters:
+        t = translate[c.lower()]
+        if c in string.ascii_uppercase:
+            t = "000001" + t
+        out += t
 
-    return output
+    return out
 
 
 unittest.main()
