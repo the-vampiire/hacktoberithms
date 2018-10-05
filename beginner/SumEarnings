@@ -1,0 +1,8 @@
+def sum_earnings(input):
+    final = 0
+    inputs = input_in.split(',')
+    for value in inputs:
+        final += int(val)
+        if final < 0:
+            final = 0
+    return final
