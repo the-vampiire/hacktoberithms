@@ -30,15 +30,13 @@ def sum_earnings(s: str) -> int:
     >>> sum_earnings('1,3,-2,1,2')
     5
 
-
-    notes
+    Notes
     If the user did not do anything (i.e. 0,0,0,0,0) or only bought
     things without selling anything (i.e. -4,-3,-7,-1), then it should
     output with 0.
 
     >>> sum_earnings('0,0,0,0,0')
     0
-
     >>> sum_earnings('-4,-3,-7,-1')
     0
 
