@@ -1,3 +1,4 @@
+import string
 import unittest
 
 class BrailleTest(unittest.TestCase):
@@ -35,32 +36,6 @@ translate = {
     'x':'101101',
     'y':'101111',
     'z':'101011',
-    'A':'000001100000',
-    'B':'000001110000',
-    'C':'000001100100',
-    'D':'000001100110',
-    'E':'000001100010',
-    'F':'000001110100',
-    'G':'000001110110',
-    'H':'000001110010',
-    'I':'000001010100',
-    'J':'000001010110',
-    'K':'000001101000',
-    'L':'000001111000',
-    'M':'000001101100',
-    'N':'000001101110',
-    'O':'000001101010',
-    'P':'000001111100',
-    'Q':'000001111110',
-    'R':'000001111010',
-    'S':'000001011100',
-    'T':'000001011110',
-    'U':'000001101001',
-    'V':'000001111001',
-    'W':'000001010111',
-    'X':'000001101101',
-    'Y':'000001101111',
-    'Z':'000001101011',
     ' ':'000000',
 }
 
@@ -69,7 +44,10 @@ def answer(plaintext):
     output = ""
 
     for character in characters:
-        output += translate[character]
+        translation = translate[character.lower()]
+        if character in string.ascii_uppercase:
+            translation = "000001" + translation
+        output += translation
 
     return output
 
