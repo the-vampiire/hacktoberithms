@@ -10,14 +10,16 @@ algorithms to practice python, git, and contribute to an open source repo for ha
 - go to the [`Issues`](https://github.com/the-vampiire/hacktoberithms/issues) tab on this repo and view the available challenges
   - you can sort by the difficulty level labels
 - create a new branch for your solution `git checkout -b issue_number-solution`
-- create a new file called `your_username-solution.py`
+- create a new file called `challenge-title_your_username.py`
   - **create this file in the challenge level directory**
     - look at the label on the challenge issue to see its difficulty
     - look for the corresponding directory in the repo associated with that difficult label
   - this is to make it easier for me to organize the solutions
+  - ex: `profile-lookup_rosdyana.py` would go in the `beginner` directory
 - work on a solution to the challenge
 - commit your work (dont forget to add commit messages) using `git commit -m "your commit message"` or the VSC built-in utility
-- push your work up to your forked repo using
+- **test that it passes all the requirements!**
+- when it satisfies the requirements push your work up to your forked repo using
   - `git push -u origin issue_number-solution`
     - the `-u` flag will set the upstream branch on your forked repo so future pushes do not need the remote or branch name
   - `git push` if you have already set the upstream branch
