@@ -56,9 +56,9 @@ def sum_earnings(s: str) -> int:
     >>> sum_earnings('1,2,v,b,3')
     0
     """
+    vals = map(int, s.split(','))
+
     try:
-        vals = list(map(int, s.split(',')))
+        return functools.reduce(lambda x, y: max(0, x + y), vals)
     except ValueError:
         return 0
-
-    return functools.reduce(lambda x, y: max(0, x + y), vals)
