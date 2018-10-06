@@ -6,9 +6,6 @@ e = [0, -1, 0, 0] # 0
 f = [-1] #-1
 g = [2, -3, 1, 0, -5]
 
-#lst[1:] == lst[:-1]
-#all(x == val for x in list1)
-
 
 def answer(lst):
     
