@@ -1,18 +1,23 @@
+from collections import Counter
+
 a = ["hello", "Hello"]
 b = ["hello", "hey"]
 c = ["Alien", "line"]
+d = ["Hello","heel"]
 
 def mutations(lst):
     
-    first = lst[0]
-    print(first)
-    second = lst[1]
-    print(second)
+    first = lst[0].lower()
+    second = lst[1].lower()
     
-    for char in second.lower():
-        if char not in first.lower():
+    counter_first = Counter(first)
+    counter_second = Counter(second)
+   
+    for char in counter_second: 
+        if counter_first[char] != counter_second[char]:
             return False
-    return True
 
+    return True
+ 
     
-print(mutations(c))
+print(mutations(d))

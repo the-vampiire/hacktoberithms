@@ -18,7 +18,7 @@ def answer(lst):
         print("all zeros")
         return 0
     elif len(lst) == 1:
-        return abs(lst[0])
+        return lst[0]
     else:
         pos = [x for x in lst if x > 0]
         neg = [x for x in lst if x < 0]
