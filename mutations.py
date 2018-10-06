@@ -1,7 +1,7 @@
 def mutations(words):
-    for l in words[1]:
+    for l in words[1].lower():
         try:
-            "".lower().index(l)
+            words[0].lower().index(l, 0)
         except ValueError:
             return False
         return True
