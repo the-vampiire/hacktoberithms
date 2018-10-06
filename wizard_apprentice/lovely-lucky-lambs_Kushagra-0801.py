@@ -28,6 +28,16 @@ def most_generous(max_lambs):
     return number_of_henchmen
 
 
-total_lambs = int(input())
-print(most_stingy(total_lambs) - most_generous(total_lambs))
-print(most_stingy(total_lambs), most_generous(total_lambs))
+def answer(total_lambs):
+    """Call most_stingy and most_generous to calculate the answer."""
+    return most_stingy(total_lambs) - most_generous(total_lambs)
+
+
+def main():
+    """Actual function."""
+    total_lambs = int(input())
+    print(answer(total_lambs))
+
+
+if __name__ == '__main__':
+    main()
