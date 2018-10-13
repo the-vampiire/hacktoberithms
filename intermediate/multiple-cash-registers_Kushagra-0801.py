@@ -15,9 +15,8 @@ def checkout_time(customers, cash_registers):
 def test():
     """Testing function."""
     test_cases = [
-                  # ([5, 1, 3], 1, 9),
-                  # ([10, 3, 4, 2], 2, 10),
-                  ([100000-i for i in range(100000)], 100, 2)
+                  ([5, 1, 3], 1, 9),
+                  ([10, 3, 4, 2], 2, 10),
                  ]
     tests_passed = True
 
