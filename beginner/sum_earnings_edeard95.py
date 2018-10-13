@@ -7,6 +7,7 @@ def sum_earnings(input):
 		B = []
 	C = sum(B)
 	earn = round(C, 2)
-	print(earn)
-	return
-sum_earnings(input('Add this month\'s earnings:'))
+	#print(earn)
+	return earn
+out = sum_earnings(input('Add this month\'s earnings:'))
+print(out)
