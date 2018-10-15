@@ -1,10 +1,8 @@
 def sum_all(li):
-    sum = 0
-    start = min(li)
-    stop = max(li)
-    for i in range(start,stop+1):
-        sum += i
-    return sum
-
+    a=min(li)
+    b=max(li)
+    n=b-a+1
+    return (n*(a+b)/2)
 print(sum_all([1,4]))
 print(sum_all([4,1]))
+print(sum_all([10,15]))
