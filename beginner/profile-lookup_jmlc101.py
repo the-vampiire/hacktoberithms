@@ -18,6 +18,12 @@ contacts = [
         "likes": ["Intriguing Cases", "Violin"]
     },
     {
+        "firstName": "Harry",
+        "lastName": "Pottey",
+        "number": "0994372684222",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
         "firstName": "Kristian",
         "lastName": "Vos",
         "number": "unknown",
@@ -27,65 +33,48 @@ contacts = [
 
 
 def look_up_profile(name, field):
-    returns = ["No such contact", "No such property"]
+    returns = ["No such contact", "No such property", "Last name not found"]
     returned = ""
     contactFirstNames = []
-    firstNameIndex = ""
     contactLastNames = []
     nameMatch = 0
-    
-    profileIndex = ""
+    profileIndex = 0
 
     for item in contacts:
         contactFirstNames.append(item["firstName"])
 
     for firstName in contactFirstNames:
         if firstName == name:
-            firstNameIndex = firstName.index()
+            profileIndex = contactFirstNames.index(firstName)
             nameMatch += 1
 
     if nameMatch > 1:
-        inputLastName = input("Enter the last name:")
+        matchCount = 0
+        inputLastName = input("\nEnter the last name:")
         for item in contacts:
             contactLastNames.append(item["lastName"])
         for lastName in contactLastNames:
-            if lastName == inputLastName and contactFirstNames[lastName.index()] == name:
-                profileIndex = lastName.index()
-    else:
-        profileIndex = firstNameIndex
-    
-    # TODO - ADD "try" statement here in case field does not exist.
-    if nameMatch >= 1:
-        returned = contacts[profileIndex][field]
-    elif nameMatch == 0:
-        returned = returns[0]
-    # except:
-    # returned = returns[1]
+            if lastName == inputLastName and contactFirstNames[contactLastNames.index(lastName)] == name:
+                profileIndex = contactLastNames.index(lastName)      
+                matchCount += 1
+        if matchCount < 1:
+            return returns[2]
+            
+    try:
+        if nameMatch >= 1:
+            returned = contacts[profileIndex][field]
+        elif nameMatch == 0:
+            returned = returns[0]
+    except KeyError:
+        returned = returns[1]
 
     return returned
                 
 def main():
-    #userInputFirstName = input("(Look up profile) Enter the first-name associated with profile:")
-    #userInputField = input("Enter a field: \n(ex: lastName, number, likes)")
-
-    print(contacts[1]["firstName"]) # Harry
-    
-'''
-We have a list of dictionaries representing different people in our contacts list.
-
-Complete the look_up_profile() function that takes name and a field as arguments included below
-
-The function should check if name is an actual contact's firstName and the given field exists in that contact dictionary.
-
-If both are true, then return the "value" of that field.
-
-If name does not correspond to any contacts then return "No such contact"
-
-If the field does not correspond to any valid properties of a contact found to match name then return "No such property"
-'''
-
+    userInputFirstName = input("(Look up profile)\nEnter the first-name associated with profile...\n")
+    userInputField = input("\nEnter a field...\n(ex: lastName, number, likes)\n")
+    results = look_up_profile(userInputFirstName, userInputField)
+    print(f"\nResult(s) for \"{userInputField}\":\n{results}")
 
 if __name__ == "__main__":
     main()
-
-#look_up_profile("Akira", "likes")
