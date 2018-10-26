@@ -1,14 +1,21 @@
 def alphaToBraille(inputString):
-    d = {'a':'100000', 'b':'110000', 'c':'100100', 'd':'100110', 'e':'100010', 'f':'110100', 'g':'110110', 'h':'110010', 'i':'010100', 'j':'010110',
-    'k':'101000', 'l':'111000', 'm':'101100', 'n':'101110', 'o':'101010', 'p':'111100', 'q':'111110', 'r':'111010', 's':'011100', 't':'011110',
-    'u':'101001', 'v':'111001', 'w':'010111', 'x':'101101', 'y':'101111', 'z':'101011', 'A':'100000', 'B':'110000', 'C':'100100', 'D':'100110', 'E':'100010', 'F':'110100', 'G':'110110', 'H':'110010', 'I':'010100', 'J':'010110',
-    'K':'101000', 'L':'111000', 'M':'101100', 'N':'101110', 'O':'101010', 'P':'111100', 'Q':'111110', 'R':'111010', 'S':'011100', 'T':'011110',
-    'U':'101001', 'V':'111001', 'W':'010111', 'X':'101101', 'Y':'101111', 'Z':'101011', ' ':'000000'}
+    braille = ['000000', '100000', '110000', '100100', '100110', '100010', '110100', '110110', '110010', '010100', '010110',
+    '101000', '111000', '101100', '101110', '101010', '111100', '111110', '111010', '011100', '011110',
+    '101001', '111001', '010111', '101101', '101111', '101011']
+    alphabetKey = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    brailleUpper = list(map(lambda x : '000001' + x, braille))
+    alphabetKeyUpper = list(map(lambda x : x.upper(), alphabetKey))
+    lowercaseDict = dict(zip(alphabetKey, braille))
+    uppercaseDict = dict(zip(alphabetKeyUpper, brailleUpper))
     tmp = []
+
     while True:
         try:
             for item in inputString:
-                tmp.append(d[item])
+                if item.islower():
+                    tmp.append(lowercaseDict[item])
+                elif item.isupper():
+                    tmp.append(uppercaseDict[item])
             brailleString = ''.join(tmp)
             return brailleString
         except KeyError:
