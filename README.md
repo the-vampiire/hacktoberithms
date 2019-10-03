@@ -44,7 +44,7 @@ algorithm challenges to practice python, javascript, git, and helping each other
   - where `ext` will be either `.py` or `.js`
 
 ### Python Solutions
-- **must go in `python/challenge-level/` directory
+- **must go in `python/challenge-level/` directory**
   - ex: a python solution for an intermediate level problem: `python/intermediate/`
   - look at the label on the challenge issue to see its difficulty
   - look for the corresponding directory in the repo associated with that difficulty label
@@ -55,7 +55,7 @@ algorithm challenges to practice python, javascript, git, and helping each other
   - using `git commit -m "your commit message"` or the VSC built-in utility
   
 ### JavaScript Solutions
-- **must go in `javascript/challenge-level/` directory
+- **must go in `javascript/challenge-level/` directory**
   - ex: a javascript solution for an intermediate level problem: `javascript/intermediate/`
   - look at the label on the challenge issue to see its difficulty
   - look for the corresponding directory in the repo associated with that difficulty label
