@@ -1,0 +1,18 @@
+
+def sum_earnings(input):
+    try:
+        num_of_nums = input.count(",") +1
+        input_value = list(map(int, input.split(",")))
+        if len(input_value) != num_of_nums:
+            raise ValueError
+        balance = 0
+        for num in input_value:
+            balance += num
+            if balance < 0:
+                balance = 0
+        return(balance)
+    except ValueError:
+        return(0)
+
+sum_earnings(input)
+print(sum_earnings(input))
