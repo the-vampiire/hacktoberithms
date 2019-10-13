@@ -34,10 +34,15 @@ def look_up_profile(name, field):
             found = True
 
             if field in contact:
-                print(f"{name} {field}: {contact[field]}")
-                break
+                return contact[field]
             else:
-                print("No such property.")
+                return "No such property."
 
     if not found:
-        print("No such contact.")
+        return "No such contact."
+
+if __name__ == "__main__":
+        contact_name = input("First name of your contact: ")
+        key = input("Field you want to retrieve: ")
+        info = look_up_profile(contact_name, key)
+        print(info)
