@@ -27,8 +27,17 @@ contacts = [
 
 
 def look_up_profile(name, field):
-  pass # fill in your solution here
+    found = False
 
+    for contact in contacts:
+        if name == contact["firstName"]:
+            found = True
 
-// Change these values to test your function
-look_up_profile("Akira", "likes")
+            if field in contact:
+                print(f"{name} {field}: {contact[field]}")
+                break
+            else:
+                print("No such property.")
+
+    if not found:
+        print("No such contact.")
