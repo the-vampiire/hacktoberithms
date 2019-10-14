@@ -5,10 +5,12 @@
  * node version v12.9.1
  */
 
+const assert = require('assert')
+
 function checkout_time(customers, n_cashier) {
     let cashiers = Array(n_cashier).fill(0)
     customers.forEach(customer => {
-        minIndex = cashiers.reduce((accIdx, current, index) => {
+        const minIndex = cashiers.reduce((accIdx, current, index) => {
             return current < cashiers[accIdx] ? index : accIdx
         }, 0)
         cashiers[minIndex] = cashiers[minIndex] + parseInt(customer)
@@ -16,7 +18,7 @@ function checkout_time(customers, n_cashier) {
     return Math.max(...cashiers)
 }
 
-function test() {
+function explicitTest() {
     cases = [
         [[[5, 1, 3], 1], 9],
         [[[10, 3, 4, 2], 2], 10]
@@ -26,10 +28,21 @@ function test() {
         console.log("[Test case", idx, "] Inputs are ", current[0],
             ", expected result is ", current[1],
             ", result is ", res,
-            " : ", res == current[1] ? "PASS" : "FAILED");
-        return acc && res == current[1]
+            " : ", res === current[1] ? "PASS" : "FAILED");
+        return acc && res === current[1]
     }, true)
-    result ? console.log("All tests passed") : console.log("Some tests failed")
+    result ? console.log("All tests passed successfully") : console.log("Some tests failed")
 }
 
-test()
+function assertionTest() {
+    cases = [
+        [[[5, 1, 3], 1], 9],
+        [[[10, 3, 4, 2], 2], 10]
+    ]
+    cases.forEach((c) => {
+        assert(checkout_time(...c[0]) === c[1], "Tests failed")
+    })
+}
+
+assertionTest()
+explicitTest()
